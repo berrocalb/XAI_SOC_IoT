@@ -1,0 +1,18 @@
+# Versiones exactas verificadas en la prueba de humo (Python 3.13). Uso: pip install -r requirements-lock.txt
+cloudpickle==3.1.2
+joblib==1.6.0
+kaggle==2.2.4
+lime==0.2.0.1
+matplotlib==3.11.2
+numpy==2.5.4
+openpyxl==3.1.5
+pandas==3.0.6
+pyarrow==26.0.0
+PyYAML==6.0.3
+requests==2.34.2
+scikit-image==0.26.0
+scikit-learn==1.9.1
+scipy==1.18.1
+shap==0.54.1
+slicer==0.0.8
+tqdm==4.70.1

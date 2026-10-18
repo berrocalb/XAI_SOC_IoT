@@ -1,0 +1,26 @@
+codigo,cita,archivo,url_pdf,doi_o_pagina,acceso
+R01,"Alahmadi et al., 2022",R01_Alahmadi_2022_USENIX.pdf,https://www.usenix.org/system/files/sec22-alahmadi.pdf,https://www.usenix.org/conference/usenixsecurity22/presentation/alahmadi,Abierto
+R02,"Alani & Miri, 2022",R02_Alani_Miri_2022_Sensors.pdf,https://www.mdpi.com/1424-8220/22/15/5690/pdf,https://doi.org/10.3390/s22155690,Abierto
+R03,"Antonakakis et al., 2017",R03_Antonakakis_2017_USENIX.pdf,https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-antonakakis.pdf,https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/antonakakis,Abierto
+R04,"Arp et al., 2022",R04_Arp_2022_USENIX.pdf,https://www.usenix.org/system/files/sec22-arp.pdf,https://www.usenix.org/conference/usenixsecurity22/presentation/arp,Abierto
+R05,"Arreche et al., 2024",R05_Arreche_2024_IEEEAccess.pdf,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10433134,https://doi.org/10.1109/ACCESS.2024.3365140,Abierto
+R06,"Barredo Arrieta et al., 2020",R06_BarredoArrieta_2020_InfFusion.pdf,https://arxiv.org/pdf/1910.10045,https://doi.org/10.1016/j.inffus.2019.12.012,Preprint abierto (arXiv)
+R07,"Breiman, 2001",R07_Breiman_2001_MachineLearning.pdf,https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf,https://doi.org/10.1023/A:1010933404324,Versión del autor
+R08,"Dadkhah et al., 2026",R08_Dadkhah_2026_InformationSystems.pdf,,https://doi.org/10.1016/j.is.2026.102722,Suscripción (descarga manual)
+R09,"Demšar, 2006",R09_Demsar_2006_JMLR.pdf,https://www.jmlr.org/papers/volume7/demsar06a/demsar06a.pdf,https://www.jmlr.org/papers/v7/demsar06a.html,Abierto
+R10,"Fritz et al., 2012",R10_Fritz_2012_JEPGeneral.pdf,,https://doi.org/10.1037/a0024338,Suscripción (descarga manual)
+R11,"Hermosilla et al., 2025",R11_Hermosilla_2025_AppliedSciences.pdf,https://www.mdpi.com/2076-3417/15/13/7329/pdf,https://doi.org/10.3390/app15137329,Abierto
+R12,"Holm, 1979",R12_Holm_1979_ScandJStat.pdf,,https://www.jstor.org/stable/4615733,Suscripción (descarga manual)
+R13,"IBM Security, 2023",R13_IBM_2023_GlobalSOCStudy.pdf,https://www.ibm.com/downloads/cas/5AEDAOJN,https://www.ibm.com/downloads/cas/5AEDAOJN,Abierto (informe)
+R14,"Le et al., 2022",R14_Le_2022_Sensors.pdf,https://www.mdpi.com/1424-8220/22/3/1154/pdf,https://doi.org/10.3390/s22031154,Abierto
+R15,"Lundberg et al., 2020",R15_Lundberg_2020_NatMachIntell.pdf,https://arxiv.org/pdf/1905.04610,https://doi.org/10.1038/s42256-019-0138-9,Preprint abierto (arXiv)
+R16,"Lundberg & Lee, 2017",R16_Lundberg_Lee_2017_NeurIPS.pdf,https://arxiv.org/pdf/1705.07874,https://arxiv.org/abs/1705.07874,Abierto
+R17,"Miller, 2019",R17_Miller_2019_ArtificialIntelligence.pdf,https://arxiv.org/pdf/1706.07269,https://doi.org/10.1016/j.artint.2018.07.007,Preprint abierto (arXiv)
+R18,"Munilla & Khammas, 2026",R18_Munilla_Khammas_2026_Sensors.pdf,https://www.mdpi.com/1424-8220/26/10/2924/pdf,https://doi.org/10.3390/s26102924,Abierto
+R19,"Neto et al., 2023",R19_Neto_2023_Sensors.pdf,https://www.mdpi.com/1424-8220/23/13/5941/pdf,https://doi.org/10.3390/s23135941,Abierto
+R20,"Pa et al., 2016",R20_Pa_2016_JIP.pdf,https://www.jstage.jst.go.jp/article/ipsjjip/24/3/24_522/_pdf,https://doi.org/10.2197/ipsjjip.24.522,Abierto
+R21,"Ribeiro et al., 2016",R21_Ribeiro_2016_KDD.pdf,https://arxiv.org/pdf/1602.04938,https://doi.org/10.1145/2939672.2939778,Preprint abierto (arXiv)
+R22,"Samek et al., 2017",R22_Samek_2017_IEEETNNLS.pdf,https://arxiv.org/pdf/1509.06321,https://doi.org/10.1109/TNNLS.2016.2599820,Preprint abierto (arXiv)
+R23,"Shapley, 1953",R23_Shapley_1953_ContribTheoryGames.pdf,,,Libro (descarga manual)
+R24,"Strobl et al., 2007",R24_Strobl_2007_BMCBioinformatics.pdf,https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-8-25.pdf,https://doi.org/10.1186/1471-2105-8-25,Abierto
+R25,"Vectra AI, 2023",R25_VectraAI_2023_StateThreatDetection.pdf,https://content.vectra.ai/hubfs/downloadable-assets/V_2023-State-of-Threat-Detection.pdf,https://content.vectra.ai/hubfs/downloadable-assets/V_2023-State-of-Threat-Detection.pdf,Abierto (informe)

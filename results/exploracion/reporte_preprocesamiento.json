@@ -1,0 +1,89 @@
+{
+  "pasos": [
+    {
+      "archivo": "pcap.csv",
+      "filas_originales": 737651,
+      "filas_familias_incluidas": 562378,
+      "columna_etiqueta": "MalwareFamily",
+      "columna_grupo": "Hash"
+    }
+  ],
+  "columnas_excluidas_por_nombre": [
+    "Arch",
+    "Hash",
+    "IAT",
+    "MalwareFamily",
+    "archivo_origen"
+  ],
+  "columnas_no_numericas": [],
+  "columnas_constantes": [
+    "SMTP",
+    "SSH",
+    "IRC"
+  ],
+  "filas_eliminadas_inf_nulos": 281,
+  "filas_eliminadas_duplicados": 131377,
+  "n_caracteristicas": 35,
+  "caracteristicas": [
+    "Header_Length",
+    "Protocol Type",
+    "Time_To_Live",
+    "Rate",
+    "fin_flag_number",
+    "syn_flag_number",
+    "rst_flag_number",
+    "psh_flag_number",
+    "ack_flag_number",
+    "ece_flag_number",
+    "cwr_flag_number",
+    "ack_count",
+    "syn_count",
+    "fin_count",
+    "rst_count",
+    "HTTP",
+    "HTTPS",
+    "DNS",
+    "Telnet",
+    "TCP",
+    "UDP",
+    "DHCP",
+    "ARP",
+    "ICMP",
+    "IGMP",
+    "IPv",
+    "LLC",
+    "Tot sum",
+    "Min",
+    "Max",
+    "AVG",
+    "Std",
+    "Tot size",
+    "Number",
+    "Variance"
+  ],
+  "particion_agrupada_por_binario": false,
+  "binarios_por_familia": {
+    "DarkNexus": {
+      "binarios_train": 64,
+      "binarios_test": 27
+    },
+    "Gafgyt": {
+      "binarios_train": 3,
+      "binarios_test": 2
+    },
+    "Mirai": {
+      "binarios_train": 781,
+      "binarios_test": 335
+    }
+  },
+  "ventanas_train": {
+    "Mirai": 111834,
+    "DarkNexus": 15077,
+    "Gafgyt": 4043
+  },
+  "ventanas_test": {
+    "Mirai": 38155,
+    "DarkNexus": 4252,
+    "Gafgyt": 1775
+  }
+}

@@ -1,0 +1,18 @@
+# Entornos
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Credenciales de Kaggle
+kaggle.json
+# Datos crudos: el CSV original (194 MB) supera el límite de GitHub (100 MB);
+# se versiona su copia comprimida data/raw/pcap.csv.gz (23 MB), que los scripts leen directamente
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/*.csv.gz
+# Modelo serializado (se regenera con src/03_entrenar_detector.py)
+results/modelo/*.joblib
+# Archivos temporales
+~$*
+fuentes/pendientes_descarga_manual.csv

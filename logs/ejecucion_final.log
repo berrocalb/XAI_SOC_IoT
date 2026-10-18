@@ -1,0 +1,64 @@
+# Registro de la ejecución final (python ejecutar_todo.py), CPU de 2 núcleos, 18/10/2026
+
+=== Paso 1: 01_explorar_dataset.py ===
+13:01:10 | 01_exploracion | pcap.csv: 737651 filas, 42 columnas | etiqueta=MalwareFamily | grupo=Hash | arq=Arch
+13:01:13 | 01_exploracion | Resumen guardado en results/exploracion/resumen_exploracion.md
+
+=== Paso 2: 02_preprocesar.py ===
+13:01:18 | 02_preproc | pcap.csv: 737651 -> 562378 ventanas de familias incluidas
+13:01:20 | 02_preproc | Mirai: submuestreo por binario 405573 -> 149989 ventanas
+13:01:20 | 02_preproc | Alguna familia tiene menos de 10 binarios identificables: revise la columna de grupo.
+13:01:20 | 02_preproc | Train: 130954 ventanas | Test: 44182 ventanas | 35 características
+
+=== Paso 3: 03_entrenar_detector.py ===
+13:01:29 | 03_detector | Entrenamiento: 6.9 s
+13:01:31 | 03_detector | F1 macro = 0.5529 | TFP macro = 0.1621
+  familia  precision  exhaustividad     f1    tfp  soporte
+DarkNexus     0.4435         0.3664 0.4013 0.0490     4252
+   Gafgyt     0.4458         0.2293 0.3028 0.0119     1775
+    Mirai     0.9355         0.9748 0.9547 0.4254    38155
+    Macro     0.6083         0.5235 0.5529 0.1621    44182
+
+=== Paso 4: 04_explicar_alertas.py ===
+13:01:34 | 04_explicaciones | Alertas muestreadas: 390 ({'DarkNexus': 130, 'Gafgyt': 130, 'Mirai': 130})
+
+Alertas: 100%|██████████| 390/390 [12:01<00:00,  1.85s/it]
+13:13:44 | 04_explicaciones | Registro guardado en results/registro
+            dp_k  inversion    nc80     ct3     ee     rp
+condicion                                                
+C0         0.182      0.410   9.000  63.789  1.000  1.000
+C1         0.174      0.418   6.538  67.234  1.000  0.655
+C2         0.188      0.413  12.064  48.285  0.501  0.474
+
+=== Paso 5: 05_analisis_estadistico.py ===
+13:13:46 | 05_estadistica | Contrastes guardados en results/tablas/contrastes.csv
+# Decisión sobre las hipótesis específicas
+
+- H.E.1 (fidelidad): no se acepta (Δp@k de C1 y C2 frente a C0, Wilcoxon + Holm).
+- H.E.2 (estabilidad): no se acepta (medianas EE/RP de C1 y C2 frente a 0.8: ee-C1 = 1.000, ee-C2 = 0.504, rp-C1 = 0.667, rp-C2 = 0.429).
+- H.E.3 (parsimonia): no se acepta (NC80 y CT3 de C1 y C2 frente a C0).
+
+Nivel de significación α = 0.05.
+
+=== Paso 6: 06_figuras_tablas.py ===
+           dp_k_mediana  tid_pct  nc80_mediana  ct3_mediana  ee_mediana  rp_mediana
+condicion                                                                          
+C0                0.024   41.026           9.0       63.789       1.000       1.000
+C1                0.031   41.795           7.0       66.669       1.000       0.667
+C2                0.033   41.282          12.0       48.541       0.504       0.429
+                   indicador   valor
+  TME TreeSHAP (ms, mediana) 244.407
+      TME LIME (ms, mediana) 119.365
+            MP TreeSHAP (MB)   0.003
+                MP LIME (MB)   8.499
+      CJ SHAP-LIME (mediana)   0.250
+Spearman SHAP-LIME (mediana)   0.421
+13:13:48 | 06_figuras | Figuras en results/figuras y tablas en results/tablas
+
+Resumen de tiempos:
+  01_explorar_dataset.py              0.1 min
+  02_preprocesar.py                   0.1 min
+  03_entrenar_detector.py             0.2 min
+  04_explicar_alertas.py             12.2 min
+  05_analisis_estadistico.py          0.0 min
+  06_figuras_tablas.py                0.0 min

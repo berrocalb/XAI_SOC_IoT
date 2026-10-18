@@ -1,0 +1,68 @@
+# =============================================================================
+# Configuración del experimento
+# "Marco de explicabilidad basado en SHAP y LIME para mejorar la interpretabilidad
+#  de las alertas de detección de intrusiones en SOC que monitorean redes IoT a
+#  nivel internacional, 2026"
+# Dataset: CIC-YNU-IoTMal 2026 (tráfico de red / PCAP procesado)
+# =============================================================================
+
+semilla: 42
+
+kaggle:
+  # Redistribución en Kaggle del dataset oficial del CIC (UNB). Cambiar si se usa otra copia.
+  dataset: "raneemababneh/iot-malware-network-traffic-dataset-cic-ynu-2026"
+  # Fuente oficial (descarga manual): https://www.unb.ca/cic/datasets/ynu-iot-2026.html
+
+datos:
+  dir_raw: "data/raw"
+  dir_processed: "data/processed"
+  # Patrones de búsqueda de archivos de tráfico de red (Parquet, CSV o CSV comprimido) dentro de data/raw
+  patrones: ["**/*.parquet", "**/*.csv", "**/*.csv.gz"]
+  # Si los archivos de tráfico tienen un indicador en el nombre (p. ej. "pcap"), se priorizan
+  filtro_nombre: "pcap"
+  # Nombre de la columna de etiqueta (familia). null = detección automática
+  columna_etiqueta: null
+  # Columna que identifica al binario de malware (hash SHA-256). null = detección automática
+  columna_grupo: null
+  # Columna de arquitectura (ARM, MIPS, MIPSEL, x86). null = detección automática o nombre de archivo
+  columna_arquitectura: null
+  # Familias incluidas en el estudio (se normalizan a minúsculas al comparar)
+  clases_incluidas: ["Mirai", "DarkNexus", "Gafgyt"]
+  # Sinónimos de familias
+  sinonimos:
+    bashlite: "Gafgyt"
+    gafgyt: "Gafgyt"
+    mirai: "Mirai"
+    darknexus: "DarkNexus"
+    dark_nexus: "DarkNexus"
+  # Límite de ventanas por familia (submuestreo por binario para la laptop). null = sin límite
+  max_ventanas_por_clase: 150000
+
+preprocesamiento:
+  proporcion_prueba: 0.30
+  # Columnas a excluir por nombre (expresiones regulares, sin distinguir mayúsculas)
+  excluir_regex: ["^ip$", "^ip_", "src_ip", "dst_ip", "ip_src", "ip_dst", "mac", "^time$", "timestamp", "stamp", "date", "hash", "sha", "md5",
+                  "file", "path", "name", "uid", "^id$", "_id$", "arch", "label", "family", "class"]
+  # Variables que actúan como atajos de captura y no describen el comportamiento del tráfico.
+  # En el esquema CICIoT2023, IAT se comporta como una marca temporal de la captura.
+  excluir_atajos: ["^iat$"]
+
+modelo:
+  n_estimators: 100
+  max_depth: 20
+  min_samples_leaf: 1
+  class_weight: "balanced_subsample"
+  n_jobs: -1
+
+explicacion:
+  k: 5                       # características principales por explicación
+  alertas_por_clase: 130     # n = 130 x 3 familias = 390
+  repeticiones_lime: 10      # R
+  lime_num_samples: 5000
+  lime_fondo: 5000           # filas de entrenamiento usadas como fondo de LIME
+  epsilon: 0.01              # magnitud relativa de la perturbación (robustez)
+  intentos_perturbacion: 10
+  umbral_estabilidad: 0.80   # referencia de H.E.2
+
+estadistica:
+  alfa: 0.05

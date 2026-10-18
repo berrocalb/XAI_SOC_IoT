@@ -1,0 +1,9 @@
+# Alternativa con conda:  conda env create -f environment.yml  &&  conda activate xai-soc-iot
+name: xai-soc-iot
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt

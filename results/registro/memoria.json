@@ -1,0 +1,23 @@
+{
+  "memoria": {
+    "TreeSHAP": {
+      "memoria_pico_mb": 0.0033597946166992188,
+      "alertas_medidas": 20
+    },
+    "LIME": {
+      "memoria_pico_mb": 8.4987211227417,
+      "alertas_medidas": 20
+    }
+  },
+  "parametros": {
+    "k": 5,
+    "alertas_por_clase": 130,
+    "repeticiones_lime": 10,
+    "lime_num_samples": 5000,
+    "lime_fondo": 5000,
+    "epsilon": 0.01,
+    "intentos_perturbacion": 10,
+    "umbral_estabilidad": 0.8
+  },
+  "n_alertas": 390
+}

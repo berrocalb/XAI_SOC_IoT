@@ -1,0 +1,91 @@
+{
+  "archivos": [
+    {
+      "archivo": "pcap.csv",
+      "filas": 737651,
+      "n_columnas": 42,
+      "columnas": [
+        "Header_Length",
+        "Protocol Type",
+        "Time_To_Live",
+        "Rate",
+        "fin_flag_number",
+        "syn_flag_number",
+        "rst_flag_number",
+        "psh_flag_number",
+        "ack_flag_number",
+        "ece_flag_number",
+        "cwr_flag_number",
+        "ack_count",
+        "syn_count",
+        "fin_count",
+        "rst_count",
+        "HTTP",
+        "HTTPS",
+        "DNS",
+        "Telnet",
+        "SMTP",
+        "SSH",
+        "IRC",
+        "TCP",
+        "UDP",
+        "DHCP",
+        "ARP",
+        "ICMP",
+        "IGMP",
+        "IPv",
+        "LLC",
+        "Tot sum",
+        "Min",
+        "Max",
+        "AVG",
+        "Std",
+        "Tot size",
+        "IAT",
+        "Number",
+        "Variance",
+        "Hash",
+        "MalwareFamily",
+        "Arch"
+      ],
+      "columna_etiqueta": "MalwareFamily",
+      "columna_grupo": "Hash",
+      "columna_arquitectura": "Arch"
+    }
+  ],
+  "familias_ventanas": {
+    "Mirai": 507772,
+    "Unknown": 113620,
+    "Benign": 51791,
+    "DarkNexus": 44156,
+    "Gafgyt": 10450,
+    "Generic": 9050,
+    "Tsunami": 786,
+    "Agent": 26
+  },
+  "familias_binarios": {
+    "Agent": 1,
+    "Benign": 1980,
+    "DarkNexus": 91,
+    "Gafgyt": 5,
+    "Generic": 29,
+    "Mirai": 2795,
+    "Tsunami": 3,
+    "Unknown": 695
+  },
+  "arquitecturas": {
+    "arm": 737651
+  },
+  "tabla_familia_arquitectura": {
+    "arm": {
+      "Agent": 26,
+      "Benign": 51791,
+      "DarkNexus": 44156,
+      "Gafgyt": 10450,
+      "Generic": 9050,
+      "Mirai": 507772,
+      "Tsunami": 786,
+      "Unknown": 113620
+    }
+  }
+}

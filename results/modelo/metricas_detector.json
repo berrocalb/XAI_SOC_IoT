@@ -1,0 +1,21 @@
+{
+  "exactitud": 0.8862659001403287,
+  "f1_macro": 0.5529485361545551,
+  "tfp_macro": 0.16210387387295658,
+  "tiempo_entrenamiento_s": 6.910646423000003,
+  "tiempo_prediccion_ms_por_ventana": 0.007348473858132082,
+  "clases": [
+    "DarkNexus",
+    "Gafgyt",
+    "Mirai"
+  ],
+  "n_train": 130954,
+  "n_test": 44182,
+  "hiperparametros": {
+    "n_estimators": 100,
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "class_weight": "balanced_subsample",
+    "n_jobs": -1
+  }
+}

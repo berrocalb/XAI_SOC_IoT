@@ -1,0 +1,7 @@
+indicador,valor
+"TME TreeSHAP (ms, mediana)",244.407
+"TME LIME (ms, mediana)",119.365
+"MP TreeSHAP (MB, solo memoria Python; el núcleo C++ no se mide)",0.003
+MP LIME (MB),8.499
+CJ SHAP-LIME (mediana),0.25
+Spearman SHAP-LIME (mediana),0.421
